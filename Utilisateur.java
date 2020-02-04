@@ -8,15 +8,16 @@ public class Utilisateur {
 
     private Manga manga;
 
-    public void comparer(Manga M) throws IOException {
+    public void comparer() throws IOException {
         String file;
-        BufferedReader br = new BufferedReader(new FileReader(liste));
-        String line;
-        while ((line = br.readLine()) != null) {
-            // process the line.
-            
+        try (BufferedReader br = new BufferedReader(new FileReader("liste"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                // process the line.
+                System.out.println(line);
+                
+            }
         }
-        br.close();
     }
 
 }
