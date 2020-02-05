@@ -10,6 +10,8 @@ public class Mangaka {
 
     protected ArrayList<Manga> m_manga_ecrit = new ArrayList<Manga>();
 
+    /* Constructeur */
+    
     public Mangaka(String m_nom, String m_prenom, int m_age) {
         this.m_nom = m_nom;
         this.m_prenom = m_prenom;
@@ -17,31 +19,29 @@ public class Mangaka {
 
     }
 
-    public void afficher() {
-        System.out.println("****** - 漫画家 - ******");
+    /* Methodes */
+    public void afficher() {        // afficher les détails d'un mangaka
+        System.out.println("****** - 漫画家 - ******"); // 漫画家 = mangaka
         System.out.println("++ Prénom : " + m_prenom);
         System.out.println("++ Nom : " + m_nom);
         System.out.println("++ Age : " + m_age);
         System.out.println("***********************");
 
         afficherManga();
-
     }
 
-    public void afficherManga() {
-        System.out.println("\n****** - 漫画 - ******");
+    public void afficherManga() {   // Afficher les details de touts les mangas écrits par un mangaka
+        System.out.println("\n****** - 漫画 - ******"); // 漫画 = manga
         for (int i = 0; i < m_manga_ecrit.size(); i++) 
         {
             System.out.print("++ ");
             System.out.println(m_manga_ecrit.get(i).getM_titre());
         }
         System.out.println("***********************");
-
     }
 
-    public int getM_manga_ecrit() {
+    // Getters & Setters 
+        public int getM_manga_ecrit() {
         return m_manga_ecrit.size();
-    }
-    
-    
+    } 
 }
