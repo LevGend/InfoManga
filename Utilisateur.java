@@ -10,14 +10,14 @@ public class Utilisateur {
 
     public void comparer() throws IOException {
         String file;
-        try (BufferedReader br = new BufferedReader(new FileReader("liste"))) {
-            String line;
+        BufferedReader br;
+        br = new BufferedReader(new FileReader("liste")) {
             while ((line = br.readLine()) != null) {
-                // process the line.
-                System.out.println(line);
-                
-            }
+            // process the line.
+            System.out.println();
+            
         }
+        };
     }
 
 }
