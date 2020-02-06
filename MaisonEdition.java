@@ -23,18 +23,26 @@ public class MaisonEdition {
 
     /* Methodes */
     public void afficher() {
-        System.out.println("***********************");
+        int n = 1;
+        int total = 0;
+        System.out.println("\n***********************");
         System.out.println("Maison d'edition : " + m_nom);
-        System.out.println("++");
-
         for (int i = 0; i < Manga.m_toutLesMangas.size(); i++) // tant que i est inferieur au nombre de place utilisé dans l'ArrayList de tout les mangas
         {
-            if (Manga.m_toutLesMangas.get(i). == m_nom){    // J'aimerais récuperer le nom de l'éditeur depuis l'ArrayList
-                System.out.println("tt");  // test
+            if (Manga.m_toutLesMangas.get(i).getM_maisonEdition() == this) {
+                total++;  // test
             }
         }
+        System.out.println("Nombe de mangas édités : " + total);
+        for (int i = 0; i < Manga.m_toutLesMangas.size(); i++) // tant que i est inferieur au nombre de place utilisé dans l'ArrayList de tout les mangas
+        {
+            if (Manga.m_toutLesMangas.get(i).getM_maisonEdition() == this) {
+                System.out.println((n++) + " > " + Manga.m_toutLesMangas.get(i).getM_titre());  // test
+            }
+        }
+        System.out.println("***********************");
     }
-    
+
     /* Getters & Setters */
     public String getvM_nom() {
         return m_nom;
