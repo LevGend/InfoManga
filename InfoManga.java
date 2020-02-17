@@ -7,7 +7,8 @@ public class InfoManga {
     public static void main(String[] args) throws IOException {
 
         Utilisateur U = new Utilisateur();
-        
-        U.comparer();
+        Manga M = new Manga();
+
+        U.lire();
     }
 }
